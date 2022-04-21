@@ -1,0 +1,22 @@
+body
+{
+    box-sizing: border-box;
+}
+input , textarea
+{
+    background-color: #111;
+    outline: none;
+}
+input:focus , textarea:focus
+{
+background-color: #000;
+transform: scale(1.1);
+}
+span
+{
+    background-color: #dc3545;
+}
+span::before
+{
+    content: 'total: ';
+}

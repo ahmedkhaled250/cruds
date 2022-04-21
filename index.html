@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body class="bg-dark">
+    <header class="text-center text-secondary p-4">
+        <h1 class="fw-bolder">CRUDS</h1>
+        <h3 class="fw-bold">CREATE READ UPDATE DELETE SEARSH</h3>
+    </header>
+    <section class="p-4">
+        <div class="container">
+            <div class="row">
+                <input type="text" class="col-md-12 border-0 text-light p-2 rounded-3 " id="productName"
+                    placeholder="Name">
+                <div class="col-md-12 p-3 text-center">
+                    <div class="row d-flex justify-content-around">
+                        <input type="number" onkeyup="getTotal()"
+                            class="col-md-2 border-0 text-light p-2 m-2 rounded-3 " id="productPrice"
+                            placeholder="Price">
+                        <input type="number" onkeyup="getTotal()"
+                            class="col-md-2 border-0 text-light p-2 m-2 rounded-3 " id="productTaxs" placeholder="Taxs">
+                        <input type="number" onkeyup="getTotal()"
+                            class="col-md-2 border-0 text-light p-2 m-2 rounded-3 " id="productAds" placeholder="Ads">
+                        <input type="number" onkeyup="getTotal()"
+                            class="col-md-2 border-0 text-light p-2 m-2 rounded-3 " id="productDiscound"
+                            placeholder="Discound">
+                        <span class="col-md-2 border-0 text-light p-2 ps-0 rounded-3 m-2" id="total"></span>
+                    </div>
+                </div>
+                <input type="number" class="col-md-12 border-0 text-light p-2 rounded-3 m-2" id="productCount"
+                    placeholder="Counter">
+                <input type="text" class="col-md-12 border-0 text-light p-2 rounded-3 m-2" id="productCategory"
+                    placeholder="Category">
+                <textarea class="col-md-12 border-0 text-light p-2 rounded-3 m-2" id="productDesc"
+                    placeholder="Desc"></textarea>
+                <button onclick="creatProduct()" class="btn btn-outline-info rounded-pill"id="submit">Create</button>
+            </div>
+            <div>
+                <input type="text" class="col-md-12 border-0 text-light p-2 rounded-3 m-2" onkeyup="searshProduct(this.value)" id="searsh"
+                placeholder="Searsh     ...">
+                <div class="row justify-content-between px-4">
+                    <button class="btn btn-outline-info col-md-6 me-2 rounded-pill" onclick="getSearshMood(this.id)" id="searshName">Searsh by name</button>
+                    <button class="btn btn-outline-info col-md-5 ms-2 rounded-pill" onclick="getSearshMood(this.id)" id="searshCategory">Searsh by Category</button>
+                </div>
+            </div>
+            <div id="deleteAll" class="py-3"></div>
+            <div class="p-5">
+                <table class="table text-secondary">
+                    <thead class="fw-bold">
+                        <tr>
+                            <td>ID</td>
+                            <td>Name</td>
+                            <td>Price</td>
+                            <td>Taxs</td>
+                            <td>Ads</td>
+                            <td>Discound</td>
+                            <td>Total</td>
+                            <td>Category</td>
+                            <td>Desc</td>
+                            <td>Update</td>
+                            <td>Delete</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tableRow">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
